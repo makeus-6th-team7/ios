@@ -14,6 +14,7 @@
 		3D38FDA525F107F7005A9547 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FDA425F107F7005A9547 /* UIButton.swift */; };
 		3D38FDAA25F1080F005A9547 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FDA925F1080F005A9547 /* UIViewController.swift */; };
 		3D38FDAF25F1082D005A9547 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FDAE25F1082D005A9547 /* UINavigationBar.swift */; };
+		3D38FDB425F10A7B005A9547 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FDB325F10A7B005A9547 /* BaseTabBarController.swift */; };
 		3D78326225E1555A000D96E4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D78326125E1555A000D96E4 /* BaseViewController.swift */; };
 		3DC5097F25DA4AF300E2579B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5097E25DA4AF300E2579B /* AppDelegate.swift */; };
 		3DC5098125DA4AF300E2579B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5098025DA4AF300E2579B /* SceneDelegate.swift */; };
@@ -51,6 +52,7 @@
 		3D38FDA425F107F7005A9547 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		3D38FDA925F1080F005A9547 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		3D38FDAE25F1082D005A9547 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		3D38FDB325F10A7B005A9547 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		3D78326125E1555A000D96E4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3DC5097B25DA4AF300E2579B /* MakeUs6th.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeUs6th.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC5097E25DA4AF300E2579B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				3D78326125E1555A000D96E4 /* BaseViewController.swift */,
+				3D38FDB325F10A7B005A9547 /* BaseTabBarController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				3D38FD9525F106F0005A9547 /* Constant.swift in Sources */,
 				3D38FDA525F107F7005A9547 /* UIButton.swift in Sources */,
 				3D38FDA025F107DB005A9547 /* UIView.swift in Sources */,
+				3D38FDB425F10A7B005A9547 /* BaseTabBarController.swift in Sources */,
 				3DC5097F25DA4AF300E2579B /* AppDelegate.swift in Sources */,
 				3DC5098125DA4AF300E2579B /* SceneDelegate.swift in Sources */,
 				3D38FD9B25F1074E005A9547 /* Color.swift in Sources */,
