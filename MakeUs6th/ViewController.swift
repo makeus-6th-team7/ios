@@ -13,6 +13,10 @@ class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // 네비게이션 바 타이틀
+        self.navigationItem.title = "심사숙소"
+        
         btnSetting()
     }
     
