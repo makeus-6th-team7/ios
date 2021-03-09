@@ -9,6 +9,7 @@ target 'MakeUs6th' do
   pod 'Alamofire'
   pod 'AlamofireNetworkActivityIndicator'
   pod 'SnapKit'
+  pod 'Then'
 
   target 'MakeUs6thTests' do
     inherit! :search_paths
