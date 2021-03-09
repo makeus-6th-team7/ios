@@ -16,6 +16,7 @@
 		3D38FDAF25F1082D005A9547 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FDAE25F1082D005A9547 /* UINavigationBar.swift */; };
 		3D38FDB425F10A7B005A9547 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FDB325F10A7B005A9547 /* BaseTabBarController.swift */; };
 		3D38FDBA25F10BBE005A9547 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FDB925F10BBE005A9547 /* IndicatorView.swift */; };
+		3D3C53BF25F65F01007D2456 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C53BE25F65F01007D2456 /* HomeViewController.swift */; };
 		3D78326225E1555A000D96E4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D78326125E1555A000D96E4 /* BaseViewController.swift */; };
 		3DC5097F25DA4AF300E2579B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5097E25DA4AF300E2579B /* AppDelegate.swift */; };
 		3DC5098125DA4AF300E2579B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5098025DA4AF300E2579B /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 		3DC5098B25DA4AF400E2579B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC5098925DA4AF400E2579B /* LaunchScreen.storyboard */; };
 		3DC5099625DA4AF400E2579B /* MakeUs6thTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5099525DA4AF400E2579B /* MakeUs6thTests.swift */; };
 		3DC509A125DA4AF400E2579B /* MakeUs6thUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC509A025DA4AF400E2579B /* MakeUs6thUITests.swift */; };
+		3DDA90E325F6644600C6A536 /* HomeTopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA90E225F6644600C6A536 /* HomeTopCollectionViewCell.swift */; };
 		491B8A154AC31C5FC386CA7F /* Pods_MakeUs6th_MakeUs6thUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C050E33145EF856A3205F9B /* Pods_MakeUs6th_MakeUs6thUITests.framework */; };
 		DB7382E001A09C5682965459 /* Pods_MakeUs6th.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB32B4E43EA97ED52CA1E3CA /* Pods_MakeUs6th.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +57,7 @@
 		3D38FDAE25F1082D005A9547 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		3D38FDB325F10A7B005A9547 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		3D38FDB925F10BBE005A9547 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		3D3C53BE25F65F01007D2456 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3D78326125E1555A000D96E4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3DC5097B25DA4AF300E2579B /* MakeUs6th.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeUs6th.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC5097E25DA4AF300E2579B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 		3DC5099C25DA4AF400E2579B /* MakeUs6thUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeUs6thUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC509A025DA4AF400E2579B /* MakeUs6thUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeUs6thUITests.swift; sourceTree = "<group>"; };
 		3DC509A225DA4AF400E2579B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DDA90E225F6644600C6A536 /* HomeTopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopCollectionViewCell.swift; sourceTree = "<group>"; };
 		4BA4294624A8EDA85695D658 /* Pods_MakeUs6thTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakeUs6thTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF97901F021DD2EEC916BD8 /* Pods-MakeUs6th-MakeUs6thUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeUs6th-MakeUs6thUITests.debug.xcconfig"; path = "Target Support Files/Pods-MakeUs6th-MakeUs6thUITests/Pods-MakeUs6th-MakeUs6thUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F76AB6DE1C983CA5EDF93D3 /* Pods-MakeUs6th-MakeUs6thUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeUs6th-MakeUs6thUITests.release.xcconfig"; path = "Target Support Files/Pods-MakeUs6th-MakeUs6thUITests/Pods-MakeUs6th-MakeUs6thUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +133,14 @@
 			path = CommonClass;
 			sourceTree = "<group>";
 		};
+		3D3C53BD25F65EDF007D2456 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D3C53BE25F65F01007D2456 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3D78325F25E15534000D96E4 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +186,8 @@
 		3DC5097D25DA4AF300E2579B /* MakeUs6th */ = {
 			isa = PBXGroup;
 			children = (
+				3DDA90E125F6642E00C6A536 /* Cell */,
+				3D3C53BD25F65EDF007D2456 /* View */,
 				3D78325F25E15534000D96E4 /* Configuration */,
 				3DC5097E25DA4AF300E2579B /* AppDelegate.swift */,
 				3DC5098025DA4AF300E2579B /* SceneDelegate.swift */,
@@ -202,6 +216,14 @@
 				3DC509A225DA4AF400E2579B /* Info.plist */,
 			);
 			path = MakeUs6thUITests;
+			sourceTree = "<group>";
+		};
+		3DDA90E125F6642E00C6A536 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3DDA90E225F6644600C6A536 /* HomeTopCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		9769CD1C2726CAA13D8B5E5B /* Pods */ = {
@@ -474,8 +496,10 @@
 				3D38FDB425F10A7B005A9547 /* BaseTabBarController.swift in Sources */,
 				3DC5097F25DA4AF300E2579B /* AppDelegate.swift in Sources */,
 				3DC5098125DA4AF300E2579B /* SceneDelegate.swift in Sources */,
+				3DDA90E325F6644600C6A536 /* HomeTopCollectionViewCell.swift in Sources */,
 				3D38FD9B25F1074E005A9547 /* Color.swift in Sources */,
 				3D38FDBA25F10BBE005A9547 /* IndicatorView.swift in Sources */,
+				3D3C53BF25F65F01007D2456 /* HomeViewController.swift in Sources */,
 				3D38FDAF25F1082D005A9547 /* UINavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
