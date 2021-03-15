@@ -11,30 +11,44 @@ import Then
 
 class UploadViewController : BaseViewController {
     
-    // 스크롤뷰
     let scrollView = UIScrollView().then {
         $0.showsVerticalScrollIndicator = false
     }
+    
+    let progressView = UIProgressView().then {
+        $0.progressViewStyle = .bar
+        $0.setProgress(0.5, animated: true)
+        $0.trackTintColor = .customGray
+        $0.tintColor = .mainGreen
+    }
+    
+    
+    // 스크롤뷰
+    //    let scrollView = UIScrollView().then {
+    //        $0.showsVerticalScrollIndicator = false
+    //    }
     let contentView = UIView()
     
     let view1 = UIView().then {
-        $0.backgroundColor = .white
+        $0.backgroundColor = .red
     }
     
     let view2 = UIView().then {
-        $0.backgroundColor = .white
+        $0.backgroundColor = .blue
     }
     
     let view3 = UIView().then {
-        $0.backgroundColor = .white
+        $0.backgroundColor = .red
     }
     
     
     override func viewDidLoad() {
         
-        self.navigationItem.title = "업로드하기"
+        self.view.backgroundColor = .white
         
-        self.view.addSubview(scrollView) // 메인뷰에
+        self.navigationItem.title = "업로드하기"
+        self.view.addSubview(scrollView)
+        self.view.addSubview(progressView)// 메인뷰에
         scrollView.addSubview(contentView)
         _ = [view1, view2, view3].map { self.contentView.addSubview($0)}
         
@@ -47,8 +61,16 @@ extension UploadViewController {
     
     private func bindConstraints(){
         
+        
         scrollView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview() // 스크롤뷰가 표현될 영역
+            make.top.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+        }
+        
+        progressView.snp.makeConstraints { (make) in
+            make.bottom.equalTo(scrollView.snp.bottom)
+            make.leading.trailing.equalTo(scrollView)
+            make.height.equalTo(6)
         }
         
         contentView.snp.makeConstraints { (make) in
