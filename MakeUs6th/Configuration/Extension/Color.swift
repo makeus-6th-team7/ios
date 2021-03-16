@@ -24,5 +24,6 @@ extension UIColor {
     class var mainGreen: UIColor { UIColor(hex: 0x00D7AB) }
     class var tabUnSelected : UIColor {UIColor(hex: 0xAEB5BC) }
     class var customGray : UIColor {UIColor(hex: 0x999DA4) }
+    class var bwg3 : UIColor {UIColor(hex: 0xE7E9EB) }
+    class var bwg6 : UIColor {UIColor(hex: 0x999DA4)}
 }
-
