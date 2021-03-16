@@ -112,4 +112,11 @@ extension UIViewController {
     @objc func dismissIndicator() {
         IndicatorView.shared.dismiss()
     }
+    
+    func setNavi() {
+        // Navigation Bar
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.layoutIfNeeded()
+    }
 }

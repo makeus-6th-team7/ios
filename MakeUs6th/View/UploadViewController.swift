@@ -9,7 +9,8 @@ import UIKit
 import SnapKit
 import Then
 
-class UploadViewController : BaseViewController {
+
+class UploadViewController : UIViewController {
     
     let scrollView = UIScrollView().then {
         $0.showsVerticalScrollIndicator = false
@@ -30,8 +31,44 @@ class UploadViewController : BaseViewController {
     let contentView = UIView()
     
     let view1 = UIView().then {
-        $0.backgroundColor = .red
+        $0.backgroundColor = .white
     }
+    
+    let title1 = UILabel().then {
+        $0.text = "숙소 이름"
+        $0.textColor = .black
+        $0.font = UIFont.boldSystemFont(ofSize: 14)
+    }
+    
+    let ssNameTF = UITextField().then {
+        $0.borderStyle = .none
+        $0.textAlignment = .left
+        $0.textColor = .customGray
+        $0.placeholder = "숙소 이름을 적어주세요"
+        $0.font = UIFont.systemFont(ofSize: 14)
+        $0.becomeFirstResponder()
+    }
+    
+    let underLineView = UIView().then {
+        $0.backgroundColor = .bwg3
+        $0.borderWidth = 0
+    }
+    
+    let photoLabel = UILabel().then {
+        $0.text = "업로드한 사진"
+        $0.textColor = .bwg6
+        $0.font = UIFont.systemFont(ofSize: 14)
+    }
+    
+    let photoUploadBtn = UIButton().then {
+        $0.setTitle("", for: .normal)
+        $0.setImage(UIImage(systemName: "photo.on.rectangle"), for: .normal)
+        $0.tintColor = .bwg6
+        //button.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(didTapUpload), for: .touchUpInside)
+    }
+    
+    let imagePickController = UIImagePickerController()
     
     let view2 = UIView().then {
         $0.backgroundColor = .blue
@@ -41,16 +78,38 @@ class UploadViewController : BaseViewController {
         $0.backgroundColor = .red
     }
     
+    private func setUpImagePC () {
+        imagePickController.delegate = self
+    }
+    
+//    override func viewDidLayoutSubviews() {
+//        ssNameTF.setUnderLine()
+//    }
     
     override func viewDidLoad() {
         
+        setNavi()
+        
         self.view.backgroundColor = .white
         
+        // 네비게이션 바 타이틀
         self.navigationItem.title = "업로드하기"
+        
+        // MARK:- view 구조
+        /*
+         - scroll
+            - content
+                - view 1
+                    - ...
+                - view 2 ..
+         - progress
+         */
         self.view.addSubview(scrollView)
-        self.view.addSubview(progressView)// 메인뷰에
+        self.view.addSubview(progressView)
         scrollView.addSubview(contentView)
+        
         _ = [view1, view2, view3].map { self.contentView.addSubview($0)}
+        _ = [title1,ssNameTF,underLineView,photoLabel,photoUploadBtn].map {self.view1.addSubview($0)}
         
         bindConstraints()
     }
@@ -83,6 +142,32 @@ extension UploadViewController {
             make.height.equalTo(300)
         }
         
+        title1.snp.makeConstraints {
+            $0.top.equalTo(view1).offset(8)
+            $0.leading.equalTo(view1).offset(16)
+        }
+        
+        ssNameTF.snp.makeConstraints {
+            $0.top.equalTo(title1.snp.bottom).offset(16)
+            $0.leading.equalTo(title1)
+            $0.trailing.equalTo(view1).offset(-16)
+        }
+        
+        underLineView.snp.makeConstraints {
+            $0.top.equalTo(ssNameTF.snp.bottom).offset(8)
+            $0.leading.trailing.equalTo(ssNameTF)
+            $0.height.equalTo(1)
+        }
+        
+        photoLabel.snp.makeConstraints {
+            $0.top.equalTo(underLineView.snp.bottom).offset(32)
+            $0.leading.equalTo(underLineView)
+        }
+        
+        photoUploadBtn.snp.makeConstraints {
+            $0.centerY.equalTo(photoLabel)
+            $0.trailing.equalTo(underLineView)
+        }
         view2.snp.makeConstraints { (make) in
             
             make.top.equalTo(view1.snp.bottom)
@@ -97,5 +182,19 @@ extension UploadViewController {
             make.height.equalTo(300)
             make.bottom.equalToSuperview() // 이것이 중요함
         }
+    }
+}
+
+// MARK: - Photo Library 불러오기
+extension UploadViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+}
+
+
+extension UploadViewController {
+    
+    @objc func didTapUpload() {
+        //imagePickController.sourceType = .photoLibrary
+        self.navigationController?.pushViewController(UploadPhotoViewController(), animated: true)
     }
 }

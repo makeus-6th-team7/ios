@@ -6,13 +6,31 @@
 //
 
 import UIKit
+import Photos
+
+var allPhotos : PHFetchResult<PHAsset>? = nil
+var photoCount = Int()
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // photo library
+        PHPhotoLibrary.requestAuthorization { (status) in
+            switch status {
+            case .authorized :
+                print("권한 확인")
+                let fetchOptions = PHFetchOptions()
+                allPhotos = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+                photoCount = allPhotos?.count ?? 0
+            case .denied :
+                print("not allowed")
+            @unknown default :
+                print("error")
+            }
+        }
         // Override point for customization after application launch.
         return true
     }
