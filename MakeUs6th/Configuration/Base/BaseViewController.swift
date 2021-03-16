@@ -13,7 +13,10 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         
         // Navigation Bar
-        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.layoutIfNeeded()
+        self.navigationController?.navigationBar.tintColor = .black
         
         // Background Color
         self.view.backgroundColor = .white
