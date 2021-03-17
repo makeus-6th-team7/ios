@@ -19,6 +19,10 @@
 		3D3C53BF25F65F01007D2456 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C53BE25F65F01007D2456 /* HomeViewController.swift */; };
 		3D66DFDF260274B4002D385A /* HomeMidCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D66DFDE260274B4002D385A /* HomeMidCollectionViewCell.swift */; };
 		3D66DFE426028689002D385A /* HomeMid2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D66DFE326028689002D385A /* HomeMid2CollectionViewCell.swift */; };
+		3D66DFE926028FBA002D385A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D66DFE826028FBA002D385A /* SearchViewController.swift */; };
+		3D66E00826029538002D385A /* TabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D66E00626029538002D385A /* TabCollectionViewCell.swift */; };
+		3D66E0112602AAAA002D385A /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D66E0102602AAAA002D385A /* CALayer.swift */; };
+		3D66E0162602B3F8002D385A /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D66E0152602B3F8002D385A /* UISearchBar.swift */; };
 		3D78326225E1555A000D96E4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D78326125E1555A000D96E4 /* BaseViewController.swift */; };
 		3D95987A25FCFE4B0085F6EF /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D95987925FCFE4B0085F6EF /* UploadViewController.swift */; };
 		3DC5097F25DA4AF300E2579B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5097E25DA4AF300E2579B /* AppDelegate.swift */; };
@@ -65,6 +69,10 @@
 		3D3C53BE25F65F01007D2456 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3D66DFDE260274B4002D385A /* HomeMidCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMidCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D66DFE326028689002D385A /* HomeMid2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMid2CollectionViewCell.swift; sourceTree = "<group>"; };
+		3D66DFE826028FBA002D385A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		3D66E00626029538002D385A /* TabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D66E0102602AAAA002D385A /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		3D66E0152602B3F8002D385A /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
 		3D78326125E1555A000D96E4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3D95987925FCFE4B0085F6EF /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		3DC5097B25DA4AF300E2579B /* MakeUs6th.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeUs6th.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +140,8 @@
 				3D38FDA925F1080F005A9547 /* UIViewController.swift */,
 				3D38FDAE25F1082D005A9547 /* UINavigationBar.swift */,
 				3DD1249525FFAA2000EB4225 /* UITextField.swift */,
+				3D66E0102602AAAA002D385A /* CALayer.swift */,
+				3D66E0152602B3F8002D385A /* UISearchBar.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -150,6 +160,7 @@
 				3D3C53BE25F65F01007D2456 /* HomeViewController.swift */,
 				3D95987925FCFE4B0085F6EF /* UploadViewController.swift */,
 				3DD1249D25FFC73D00EB4225 /* UploadPhotoViewController.swift */,
+				3D66DFE826028FBA002D385A /* SearchViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,6 +248,7 @@
 				3DDA90E225F6644600C6A536 /* HomeTopCollectionViewCell.swift */,
 				3D66DFDE260274B4002D385A /* HomeMidCollectionViewCell.swift */,
 				3D66DFE326028689002D385A /* HomeMid2CollectionViewCell.swift */,
+				3D66E00626029538002D385A /* TabCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -510,15 +522,19 @@
 				3D38FDAA25F1080F005A9547 /* UIViewController.swift in Sources */,
 				3D38FD9525F106F0005A9547 /* Constant.swift in Sources */,
 				3DD1249E25FFC73D00EB4225 /* UploadPhotoViewController.swift in Sources */,
+				3D66E00826029538002D385A /* TabCollectionViewCell.swift in Sources */,
 				3D38FDA525F107F7005A9547 /* UIButton.swift in Sources */,
 				3D38FDA025F107DB005A9547 /* UIView.swift in Sources */,
+				3D66DFE926028FBA002D385A /* SearchViewController.swift in Sources */,
 				3D38FDB425F10A7B005A9547 /* BaseTabBarController.swift in Sources */,
 				3DC5097F25DA4AF300E2579B /* AppDelegate.swift in Sources */,
 				3DC5098125DA4AF300E2579B /* SceneDelegate.swift in Sources */,
 				3DDA90E325F6644600C6A536 /* HomeTopCollectionViewCell.swift in Sources */,
 				3D38FD9B25F1074E005A9547 /* Color.swift in Sources */,
 				3D38FDBA25F10BBE005A9547 /* IndicatorView.swift in Sources */,
+				3D66E0162602B3F8002D385A /* UISearchBar.swift in Sources */,
 				3D3C53BF25F65F01007D2456 /* HomeViewController.swift in Sources */,
+				3D66E0112602AAAA002D385A /* CALayer.swift in Sources */,
 				3D38FDAF25F1082D005A9547 /* UINavigationBar.swift in Sources */,
 				3D66DFE426028689002D385A /* HomeMid2CollectionViewCell.swift in Sources */,
 			);
