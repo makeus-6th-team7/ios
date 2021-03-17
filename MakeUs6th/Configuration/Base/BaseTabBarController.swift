@@ -11,7 +11,7 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     
     let homeViewController  = HomeViewController()
-    let searchViewController  = ViewController()
+    let searchViewController  = SearchViewController()
     let uploadViewController  = UploadViewController()
     let heartViewController  = ViewController()
     let settingViewController  = ViewController()
