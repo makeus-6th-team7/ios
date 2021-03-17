@@ -156,7 +156,8 @@ extension HomeViewController {
         view1.snp.makeConstraints { (make) in
             make.top.equalTo(pageControl.snp.bottom).offset(24)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(500)
+            //make.height.equalTo(500)
+            make.bottom.equalTo(thirdCV).offset(5)
         }
         
         titleLabel.snp.makeConstraints { (make) in
@@ -177,7 +178,7 @@ extension HomeViewController {
         }
         
         midLeadingView.snp.makeConstraints {
-            $0.top.equalTo(secondCV.snp.bottom).offset(20)
+            $0.top.equalTo(secondCV.snp.bottom).offset(32)
             $0.height.equalTo(210)
             $0.leading.equalTo(secondCV)
             $0.width.equalTo(150)
