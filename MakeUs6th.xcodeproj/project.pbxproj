@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		32B73A0056A08E6CA4ACEB6A /* Pods_MakeUs6thTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA4294624A8EDA85695D658 /* Pods_MakeUs6thTests.framework */; };
+		3D1C9D932604EA1E005D1E44 /* HomeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1C9D922604EA1E005D1E44 /* HomeMainViewController.swift */; };
 		3D38FD9525F106F0005A9547 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FD9425F106F0005A9547 /* Constant.swift */; };
 		3D38FD9B25F1074E005A9547 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FD9A25F1074E005A9547 /* Color.swift */; };
 		3D38FDA025F107DB005A9547 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FD9F25F107DB005A9547 /* UIView.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D1C9D922604EA1E005D1E44 /* HomeMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainViewController.swift; sourceTree = "<group>"; };
 		3D38FD9425F106F0005A9547 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		3D38FD9A25F1074E005A9547 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		3D38FD9F25F107DB005A9547 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				3D95987925FCFE4B0085F6EF /* UploadViewController.swift */,
 				3DD1249D25FFC73D00EB4225 /* UploadPhotoViewController.swift */,
 				3D66DFE826028FBA002D385A /* SearchViewController.swift */,
+				3D1C9D922604EA1E005D1E44 /* HomeMainViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				3DC5098325DA4AF300E2579B /* ViewController.swift in Sources */,
 				3D95987A25FCFE4B0085F6EF /* UploadViewController.swift in Sources */,
 				3D78326225E1555A000D96E4 /* BaseViewController.swift in Sources */,
+				3D1C9D932604EA1E005D1E44 /* HomeMainViewController.swift in Sources */,
 				3DD1249625FFAA2000EB4225 /* UITextField.swift in Sources */,
 				3D38FDAA25F1080F005A9547 /* UIViewController.swift in Sources */,
 				3D38FD9525F106F0005A9547 /* Constant.swift in Sources */,

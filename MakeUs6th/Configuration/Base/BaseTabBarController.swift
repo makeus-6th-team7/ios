@@ -10,7 +10,7 @@ import UIKit
 class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     
-    let homeViewController  = HomeViewController()
+    let homeViewController  = HomeMainViewController()
     let searchViewController  = SearchViewController()
     let uploadViewController  = UploadViewController()
     let heartViewController  = ViewController()
