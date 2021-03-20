@@ -36,8 +36,12 @@ class HomeMainViewController: BaseViewController {
         
         // Do any additional setup after loading the view.
     
-        // 네비게이션 바 타이틀
-        self.navigationItem.title = "심사숙소"
+        // MARK: - 네비게이션 바 타이틀에 로고 넣기
+        //self.navigationItem.title = "심사숙소"
+        let image = UIImage(named: "logo")
+        let naviImageTitle = UIImageView(image: image)
+        naviImageTitle.contentMode = .scaleAspectFit
+        navigationItem.titleView = naviImageTitle
         
         _ = [tabCV,scrollView].map { self.view.addSubview($0)}
         
