@@ -134,7 +134,8 @@ extension HomeViewController {
     private func bindConstraints(){
         
         scrollView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview() // 스크롤뷰가 표현될 영역
+            make.top.bottom.leading.trailing.equalToSuperview()
+            //make.edges.equalToSuperview() // 스크롤뷰가 표현될 영역
         }
         
         contentView.snp.makeConstraints { (make) in
