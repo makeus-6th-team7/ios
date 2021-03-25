@@ -167,7 +167,7 @@ extension HomeMainViewController {
         leftVC.didMove(toParent: self)
         
         // Right View Controller도 동일.
-        let rightVC = HomeViewController()
+        let rightVC = PopularMainViewController()
         self.addChild(rightVC)
         guard let rightVCView = rightVC.view else { return }
         print("rerer:\(self.view.frame.width)")
