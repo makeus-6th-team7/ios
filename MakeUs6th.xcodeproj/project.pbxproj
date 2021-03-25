@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		32B73A0056A08E6CA4ACEB6A /* Pods_MakeUs6thTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA4294624A8EDA85695D658 /* Pods_MakeUs6thTests.framework */; };
+		3D1469D5260A0E8A0082C888 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1469D4260A0E8A0082C888 /* TagCollectionViewCell.swift */; };
+		3D1469DA260A1BDC0082C888 /* PopularMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1469D9260A1BDC0082C888 /* PopularMainViewController.swift */; };
+		3D1469E3260A58A90082C888 /* BingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1469E2260A58A90082C888 /* BingoViewController.swift */; };
 		3D1C9D932604EA1E005D1E44 /* HomeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1C9D922604EA1E005D1E44 /* HomeMainViewController.swift */; };
 		3D38FD9525F106F0005A9547 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FD9425F106F0005A9547 /* Constant.swift */; };
 		3D38FD9B25F1074E005A9547 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FD9A25F1074E005A9547 /* Color.swift */; };
@@ -18,6 +21,7 @@
 		3D38FDB425F10A7B005A9547 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FDB325F10A7B005A9547 /* BaseTabBarController.swift */; };
 		3D38FDBA25F10BBE005A9547 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FDB925F10BBE005A9547 /* IndicatorView.swift */; };
 		3D3C53BF25F65F01007D2456 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C53BE25F65F01007D2456 /* HomeViewController.swift */; };
+		3D3E15F62609BDB400432F26 /* HomeTrustCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3E15F52609BDB400432F26 /* HomeTrustCollectionViewCell.swift */; };
 		3D66DFDF260274B4002D385A /* HomeMidCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D66DFDE260274B4002D385A /* HomeMidCollectionViewCell.swift */; };
 		3D66DFE426028689002D385A /* HomeMid2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D66DFE326028689002D385A /* HomeMid2CollectionViewCell.swift */; };
 		3D66DFE926028FBA002D385A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D66DFE826028FBA002D385A /* SearchViewController.swift */; };
@@ -59,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D1469D4260A0E8A0082C888 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D1469D9260A1BDC0082C888 /* PopularMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMainViewController.swift; sourceTree = "<group>"; };
+		3D1469E2260A58A90082C888 /* BingoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoViewController.swift; sourceTree = "<group>"; };
 		3D1C9D922604EA1E005D1E44 /* HomeMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainViewController.swift; sourceTree = "<group>"; };
 		3D38FD9425F106F0005A9547 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		3D38FD9A25F1074E005A9547 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -69,6 +76,7 @@
 		3D38FDB325F10A7B005A9547 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		3D38FDB925F10BBE005A9547 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		3D3C53BE25F65F01007D2456 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3D3E15F52609BDB400432F26 /* HomeTrustCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrustCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D66DFDE260274B4002D385A /* HomeMidCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMidCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D66DFE326028689002D385A /* HomeMid2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMid2CollectionViewCell.swift; sourceTree = "<group>"; };
 		3D66DFE826028FBA002D385A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +172,8 @@
 				3DD1249D25FFC73D00EB4225 /* UploadPhotoViewController.swift */,
 				3D66DFE826028FBA002D385A /* SearchViewController.swift */,
 				3D1C9D922604EA1E005D1E44 /* HomeMainViewController.swift */,
+				3D1469D9260A1BDC0082C888 /* PopularMainViewController.swift */,
+				3D1469E2260A58A90082C888 /* BingoViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +262,8 @@
 				3D66DFDE260274B4002D385A /* HomeMidCollectionViewCell.swift */,
 				3D66DFE326028689002D385A /* HomeMid2CollectionViewCell.swift */,
 				3D66E00626029538002D385A /* TabCollectionViewCell.swift */,
+				3D3E15F52609BDB400432F26 /* HomeTrustCollectionViewCell.swift */,
+				3D1469D4260A0E8A0082C888 /* TagCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -533,13 +545,17 @@
 				3D38FDB425F10A7B005A9547 /* BaseTabBarController.swift in Sources */,
 				3DC5097F25DA4AF300E2579B /* AppDelegate.swift in Sources */,
 				3DC5098125DA4AF300E2579B /* SceneDelegate.swift in Sources */,
+				3D1469DA260A1BDC0082C888 /* PopularMainViewController.swift in Sources */,
 				3DDA90E325F6644600C6A536 /* HomeTopCollectionViewCell.swift in Sources */,
+				3D1469D5260A0E8A0082C888 /* TagCollectionViewCell.swift in Sources */,
 				3D38FD9B25F1074E005A9547 /* Color.swift in Sources */,
 				3D38FDBA25F10BBE005A9547 /* IndicatorView.swift in Sources */,
 				3D66E0162602B3F8002D385A /* UISearchBar.swift in Sources */,
 				3D3C53BF25F65F01007D2456 /* HomeViewController.swift in Sources */,
 				3D66E0112602AAAA002D385A /* CALayer.swift in Sources */,
 				3D38FDAF25F1082D005A9547 /* UINavigationBar.swift in Sources */,
+				3D3E15F62609BDB400432F26 /* HomeTrustCollectionViewCell.swift in Sources */,
+				3D1469E3260A58A90082C888 /* BingoViewController.swift in Sources */,
 				3D66DFE426028689002D385A /* HomeMid2CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
