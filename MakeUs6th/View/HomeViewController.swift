@@ -87,7 +87,7 @@ class HomeViewController: BaseViewController {
         $0.textColor = .bwg6
         $0.font = UIFont.systemFont(ofSize: 12)
     }
-
+    
     let thirdCV = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -103,11 +103,65 @@ class HomeViewController: BaseViewController {
     }
     
     let view2 = UIView().then {
-        $0.backgroundColor = .black
+        $0.backgroundColor = .white
     }
+    
+    let titleLabel2 = UILabel().then {
+        $0.textColor = .black
+        $0.text = "좋아요가 가장 많은 게시글"
+        $0.font = UIFont.boldSystemFont(ofSize: 16)
+    }
+    
+    let subLabel2 = UILabel().then {
+        $0.textColor = .customGray
+        $0.text = "이번 주 사람들이 가장 관심이 많은 숙소는?"
+        $0.font = UIFont.boldSystemFont(ofSize: 12)
+    }
+    
+    let midCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        // 좌우 여백 없애
+        layout.minimumLineSpacing = 4
+        
+        $0.backgroundColor = .none
+        $0.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
+        $0.showsHorizontalScrollIndicator = false
+        $0.collectionViewLayout = layout
+        // tag
+        $0.tag = 3
+    }
+    
     let view3 = UIView().then {
-        $0.backgroundColor = .blue
+        $0.backgroundColor = .white
     }
+
+    let titleLabel3 = UILabel().then {
+        $0.textColor = .black
+        $0.text = "신뢰도가 가장 높은 게시글"
+        $0.font = UIFont.boldSystemFont(ofSize: 16)
+    }
+    
+    let subLabel3 = UILabel().then {
+        $0.textColor = .customGray
+        $0.text = "이번 주 사람들이 가장 관심이 많은 숙소는?"
+        $0.font = UIFont.boldSystemFont(ofSize: 12)
+    }
+    
+    let trustCV = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        // 좌우 여백 없애
+        layout.minimumLineSpacing = 10
+        
+        $0.backgroundColor = .none
+        $0.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
+        $0.showsHorizontalScrollIndicator = false
+        $0.collectionViewLayout = layout
+        // tag
+        $0.tag = 4
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,6 +174,8 @@ class HomeViewController: BaseViewController {
         _ = [topCollectionView, pageControl, view1, view2, view3].map { self.contentView.addSubview($0)}
         _ = [titleLabel,subLabel,secondCV,midLeadingView,thirdCV].map {self.view1.addSubview($0)}
         _ = [midLeadingTitleLabel,midLeadingSubLabel].map {self.midLeadingView.addSubview($0)}
+        _ = [titleLabel2,subLabel2,midCollectionView].map {self.view2.addSubview($0)}
+        _ = [titleLabel3,subLabel3,trustCV].map {self.view3.addSubview($0)}
         //view1.addSubview(titleLabel)
         
         bindConstraints()
@@ -202,29 +258,67 @@ extension HomeViewController {
         }
         
         view2.snp.makeConstraints { (make) in
-            
-            make.top.equalTo(view1.snp.bottom)
+            make.top.equalTo(view1.snp.bottom).offset(30)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(300)
+            //make.height.equalTo(300)
+            make.bottom.equalTo(midCollectionView).offset(5)
+        }
+        
+        titleLabel2.snp.makeConstraints { (make) in
+            make.top.equalTo(view2.snp.top)
+            make.leading.equalTo(view2.snp.leading).offset(16)
+        }
+        
+        subLabel2.snp.makeConstraints { (make) in
+            make.top.equalTo(titleLabel2.snp.bottom).offset(4)
+            make.leading.equalTo(titleLabel2)
+        }
+        
+        midCollectionView.snp.makeConstraints {
+            $0.top.equalTo(subLabel2.snp.bottom).offset(16)
+            $0.leading.equalTo(titleLabel2)
+            $0.trailing.equalToSuperview()
+            $0.height.equalTo(180)
         }
         
         view3.snp.makeConstraints { (make) in
-            
-            make.top.equalTo(view2.snp.bottom)
+            make.top.equalTo(view2.snp.bottom).offset(30)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(300)
+            //make.height.equalTo(300)
+            make.bottom.equalTo(trustCV).offset(10)
             make.bottom.equalToSuperview() // 이것이 중요함
+        }
+        
+        titleLabel3.snp.makeConstraints { (make) in
+            make.top.equalTo(view3.snp.top)
+            make.leading.equalTo(view3.snp.leading).offset(16)
+        }
+        
+        subLabel3.snp.makeConstraints { (make) in
+            make.top.equalTo(titleLabel3.snp.bottom).offset(4)
+            make.leading.equalTo(titleLabel3)
+        }
+        
+        trustCV.snp.makeConstraints {
+            $0.top.equalTo(subLabel3.snp.bottom).offset(16)
+            $0.leading.equalTo(titleLabel3)
+            $0.trailing.equalToSuperview()
+            $0.height.equalTo(272)
         }
     }
     
     private func setUpCollecionView () {
-        _ = [topCollectionView,secondCV,thirdCV].map { $0.delegate = self; $0.dataSource = self}
+        _ = [topCollectionView,secondCV,thirdCV,midCollectionView, trustCV].map { $0.delegate = self; $0.dataSource = self}
         
         topCollectionView.register(HomeTopCollectionViewCell.self, forCellWithReuseIdentifier: HomeTopCollectionViewCell.registerId)
         
         secondCV.register(HomeMidCollectionViewCell.self, forCellWithReuseIdentifier: HomeMidCollectionViewCell.registerId)
         
         thirdCV.register(HomeMid2CollectionViewCell.self, forCellWithReuseIdentifier: HomeMid2CollectionViewCell.registerId)
+        
+        midCollectionView.register(HomeMidCollectionViewCell.self, forCellWithReuseIdentifier: HomeMidCollectionViewCell.registerId)
+        
+        trustCV.register(HomeTrustCollectionViewCell.self, forCellWithReuseIdentifier: HomeTrustCollectionViewCell.registerId)
         
     }
 }
@@ -238,6 +332,10 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         case 1:
             return 3
         case 2:
+            return 3
+        case 3:
+            return 3
+        case 4:
             return 3
         default:
             return 0
@@ -262,8 +360,18 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
                 return UICollectionViewCell()
             }
             cell = thirdCell
+        } else if collectionView.tag == 3 {
+            guard let secondCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeMidCollectionViewCell.registerId, for: indexPath) as? HomeMidCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell = secondCell
+        } else if collectionView.tag == 4{
+            guard let fourthCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeTrustCollectionViewCell.registerId, for: indexPath) as? HomeTrustCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell = fourthCell
         }
-         
+        
         return cell
     }
     
@@ -289,7 +397,7 @@ extension HomeViewController : UICollectionViewDelegateFlowLayout {
             size = c_size
         } else if collectionView.tag == 1 {
             //let c_width = 150
-            let c_height = collectionView.frame
+            //let c_height = collectionView.frame
             let c_size = CGSize(width: 150, height: 176)
             size = c_size
         } else if collectionView.tag == 2 {
@@ -297,6 +405,17 @@ extension HomeViewController : UICollectionViewDelegateFlowLayout {
             let c_height = collectionView.frame.height
             let c_size = CGSize(width: 150, height: c_height)
             size = c_size
+        } else  if collectionView.tag == 3 {
+            //let c_width = 150
+            //let c_height = collectionView.frame
+            let c_size = CGSize(width: 150, height: 176)
+            size = c_size
+        } else if collectionView.tag == 4 {
+            
+            let width = collectionView.frame.width - 16 /// 옆 간격 고려
+            let size = CGSize(width: width, height: 80)
+            return size
+
         }
         
         return size
