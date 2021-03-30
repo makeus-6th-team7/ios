@@ -30,6 +30,7 @@
 		3D66E0162602B3F8002D385A /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D66E0152602B3F8002D385A /* UISearchBar.swift */; };
 		3D78326225E1555A000D96E4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D78326125E1555A000D96E4 /* BaseViewController.swift */; };
 		3D95987A25FCFE4B0085F6EF /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D95987925FCFE4B0085F6EF /* UploadViewController.swift */; };
+		3DAABE582613629100B0E21B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAABE572613629100B0E21B /* FirstViewController.swift */; };
 		3DC5097F25DA4AF300E2579B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5097E25DA4AF300E2579B /* AppDelegate.swift */; };
 		3DC5098125DA4AF300E2579B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5098025DA4AF300E2579B /* SceneDelegate.swift */; };
 		3DC5098325DA4AF300E2579B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5098225DA4AF300E2579B /* ViewController.swift */; };
@@ -67,6 +68,7 @@
 		3D1469D9260A1BDC0082C888 /* PopularMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMainViewController.swift; sourceTree = "<group>"; };
 		3D1469E2260A58A90082C888 /* BingoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoViewController.swift; sourceTree = "<group>"; };
 		3D1C9D922604EA1E005D1E44 /* HomeMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainViewController.swift; sourceTree = "<group>"; };
+		3D29A496261216E500A3ADA8 /* MakeUs6th.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MakeUs6th.entitlements; sourceTree = "<group>"; };
 		3D38FD9425F106F0005A9547 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		3D38FD9A25F1074E005A9547 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		3D38FD9F25F107DB005A9547 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		3D66E0152602B3F8002D385A /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
 		3D78326125E1555A000D96E4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3D95987925FCFE4B0085F6EF /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		3DAABE572613629100B0E21B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		3DC5097B25DA4AF300E2579B /* MakeUs6th.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeUs6th.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC5097E25DA4AF300E2579B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DC5098025DA4AF300E2579B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +177,7 @@
 				3D1C9D922604EA1E005D1E44 /* HomeMainViewController.swift */,
 				3D1469D9260A1BDC0082C888 /* PopularMainViewController.swift */,
 				3D1469E2260A58A90082C888 /* BingoViewController.swift */,
+				3DAABE572613629100B0E21B /* FirstViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,6 +227,7 @@
 		3DC5097D25DA4AF300E2579B /* MakeUs6th */ = {
 			isa = PBXGroup;
 			children = (
+				3D29A496261216E500A3ADA8 /* MakeUs6th.entitlements */,
 				3DDA90E125F6642E00C6A536 /* Cell */,
 				3D3C53BD25F65EDF007D2456 /* View */,
 				3D78325F25E15534000D96E4 /* Configuration */,
@@ -539,6 +544,7 @@
 				3D38FD9525F106F0005A9547 /* Constant.swift in Sources */,
 				3DD1249E25FFC73D00EB4225 /* UploadPhotoViewController.swift in Sources */,
 				3D66E00826029538002D385A /* TabCollectionViewCell.swift in Sources */,
+				3DAABE582613629100B0E21B /* FirstViewController.swift in Sources */,
 				3D38FDA525F107F7005A9547 /* UIButton.swift in Sources */,
 				3D38FDA025F107DB005A9547 /* UIView.swift in Sources */,
 				3D66DFE926028FBA002D385A /* SearchViewController.swift in Sources */,
@@ -733,6 +739,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MakeUs6th/MakeUs6th.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GLQQLN3R4U;
@@ -756,6 +763,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MakeUs6th/MakeUs6th.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GLQQLN3R4U;
