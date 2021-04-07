@@ -28,4 +28,5 @@ extension UIColor {
     class var bwg3 : UIColor {UIColor(hex: 0xE7E9EB) }
     class var bwg5 : UIColor {UIColor(hex: 0xA6B0BA)}
     class var bwg6 : UIColor {UIColor(hex: 0x999DA4)}
+    class var bwg7 : UIColor {UIColor(hex: 0x40484E)}
 }
