@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Window 설정
         self.window = UIWindow(windowScene: scene)
-        window?.rootViewController = BaseTabBarController()
+        window?.rootViewController = FirstViewController()
         window?.makeKeyAndVisible()
     }
 
