@@ -59,6 +59,7 @@ class FirstViewController: UIViewController {
     let kakaoCircle = UIView().then {
         $0.backgroundColor = UIColor(red: 0.996, green: 0.898, blue: 0, alpha: 1)
         $0.cornerRadius = 22
+        $0.tag = 0
     }
     
     let kakaoIV = UIImageView().then {
@@ -69,13 +70,13 @@ class FirstViewController: UIViewController {
     let appleCircle = UIView().then {
         $0.backgroundColor = .black
         $0.cornerRadius = 22
+        $0.tag = 1
     }
     
     let appleIV = UIImageView().then {
         $0.image = #imageLiteral(resourceName: "apple")
         $0.contentMode = .scaleToFill
     }
-    
     
 
     override func viewDidLoad() {
@@ -87,6 +88,7 @@ class FirstViewController: UIViewController {
         _ = [appNameLabel].map {self.underlineView.addSubview($0)}
         _ = [kakaoIV].map {self.kakaoCircle.addSubview($0)}
         _ = [appleIV].map {self.appleCircle.addSubview($0)}
+        _ = [kakaoCircle,appleCircle].map {self.didTapLogin($0)}
         bindConstraints()
     }
 
@@ -96,12 +98,12 @@ extension FirstViewController {
     
     private func bindConstraints(){
         mainLabel.snp.makeConstraints {
-            $0.top.equalTo(view.snp.top).offset(130)
-            $0.leading.equalTo(view.snp.leading).offset(30)
+            $0.top.equalToSuperview().offset(130)
+            $0.leading.equalToSuperview().offset(30)
         }
         
         appNameLabel.snp.makeConstraints {
-            $0.top.equalTo(mainLabel.snp.bottom).offset(10)
+            $0.top.equalTo(mainLabel.snp.bottom).offset(5)
             $0.leading.equalTo(mainLabel)
         }
         
@@ -163,5 +165,22 @@ extension FirstViewController {
             $0.leading.equalTo(appleCircle.snp.leading).offset(14)
         }
     }
+    
+    private func didTapLogin(_ inputView : UIView) {
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(checkAction))
+        //self.myView.addGestureRecognizer(gesture)
+        if inputView.tag == 0 {
+            print("tapped")
+            kakaoCircle.addGestureRecognizer(gesture)
+        } else if inputView.tag == 1 {
+            appleCircle.addGestureRecognizer(gesture)
+        }
+    }
 }
         
+extension FirstViewController {
+    @objc func checkAction(sender : UITapGestureRecognizer) {
+        // Do what you want
+        self.changeRootViewController(UINavigationController(rootViewController: HomeMainViewController()))
+    }
+}
