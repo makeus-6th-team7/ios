@@ -11,6 +11,7 @@
 		3D1469D5260A0E8A0082C888 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1469D4260A0E8A0082C888 /* TagCollectionViewCell.swift */; };
 		3D1469DA260A1BDC0082C888 /* PopularMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1469D9260A1BDC0082C888 /* PopularMainViewController.swift */; };
 		3D1469E3260A58A90082C888 /* BingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1469E2260A58A90082C888 /* BingoViewController.swift */; };
+		3D17164226248CC600DD31BD /* SetNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17164126248CC600DD31BD /* SetNameViewController.swift */; };
 		3D1C9D932604EA1E005D1E44 /* HomeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1C9D922604EA1E005D1E44 /* HomeMainViewController.swift */; };
 		3D38FD9525F106F0005A9547 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FD9425F106F0005A9547 /* Constant.swift */; };
 		3D38FD9B25F1074E005A9547 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FD9A25F1074E005A9547 /* Color.swift */; };
@@ -67,6 +68,7 @@
 		3D1469D4260A0E8A0082C888 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D1469D9260A1BDC0082C888 /* PopularMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMainViewController.swift; sourceTree = "<group>"; };
 		3D1469E2260A58A90082C888 /* BingoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoViewController.swift; sourceTree = "<group>"; };
+		3D17164126248CC600DD31BD /* SetNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNameViewController.swift; sourceTree = "<group>"; };
 		3D1C9D922604EA1E005D1E44 /* HomeMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainViewController.swift; sourceTree = "<group>"; };
 		3D29A496261216E500A3ADA8 /* MakeUs6th.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MakeUs6th.entitlements; sourceTree = "<group>"; };
 		3D38FD9425F106F0005A9547 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				3D1469D9260A1BDC0082C888 /* PopularMainViewController.swift */,
 				3D1469E2260A58A90082C888 /* BingoViewController.swift */,
 				3DAABE572613629100B0E21B /* FirstViewController.swift */,
+				3D17164126248CC600DD31BD /* SetNameViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				3D38FDBA25F10BBE005A9547 /* IndicatorView.swift in Sources */,
 				3D66E0162602B3F8002D385A /* UISearchBar.swift in Sources */,
 				3D3C53BF25F65F01007D2456 /* HomeViewController.swift in Sources */,
+				3D17164226248CC600DD31BD /* SetNameViewController.swift in Sources */,
 				3D66E0112602AAAA002D385A /* CALayer.swift in Sources */,
 				3D38FDAF25F1082D005A9547 /* UINavigationBar.swift in Sources */,
 				3D3E15F62609BDB400432F26 /* HomeTrustCollectionViewCell.swift in Sources */,
