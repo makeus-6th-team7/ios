@@ -181,6 +181,9 @@ extension FirstViewController {
 extension FirstViewController {
     @objc func checkAction(sender : UITapGestureRecognizer) {
         // Do what you want
-        self.changeRootViewController(UINavigationController(rootViewController: HomeMainViewController()))
+        //self.changeRootViewController(UINavigationController(rootViewController: HomeMainViewController()))
+        let setNameVC = SetNameViewController()
+        setNameVC.modalPresentationStyle = .fullScreen
+        self.present(setNameVC, animated: false, completion: nil)
     }
 }
