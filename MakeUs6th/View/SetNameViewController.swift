@@ -17,6 +17,12 @@ class SetNameViewController: BaseViewController {
         $0.font = UIFont.boldSystemFont(ofSize: 16)
     }
     
+    let subLabel = UILabel().then {
+        $0.text = "영문 / 숫자 포함 8자 이내 , 확인 후 변경 불가"
+        $0.textColor = .bwg7
+        $0.font = UIFont.systemFont(ofSize: 12)
+    }
+    
     let confirmBtn = UIButton().then {
         $0.backgroundColor = .bwg5
         $0.setTitle("완료", for: .normal)
@@ -27,7 +33,7 @@ class SetNameViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        _ = [titleLabel,confirmBtn].map { self.view.addSubview($0)}
+        _ = [titleLabel,confirmBtn,subLabel].map { self.view.addSubview($0)}
         bindConstraints()
         
         confirmBtn.addTarget(self, action: #selector(didTapConfirm), for: .touchUpInside)
@@ -44,6 +50,10 @@ extension SetNameViewController {
         confirmBtn.snp.makeConstraints {
             $0.bottom.leading.trailing.equalToSuperview()
             $0.height.equalTo(76)
+        }
+        subLabel.snp.makeConstraints {
+            $0.leading.equalTo(titleLabel)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(4)
         }
     }
 }
