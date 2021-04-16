@@ -54,6 +54,7 @@ class SetNameViewController: BaseViewController {
         bindConstraints()
         
         confirmBtn.addTarget(self, action: #selector(didTapConfirm), for: .touchUpInside)
+        inputTF.addTarget(self, action: #selector(didTFChanged), for: .editingChanged)
     }
 }
 
@@ -92,5 +93,9 @@ extension SetNameViewController {
     
     @objc func didTapConfirm() {
         self.changeRootViewController(UINavigationController(rootViewController: HomeMainViewController()))
+    }
+    
+    @objc func didTFChanged() {
+        confirmBtn.backgroundColor = .mainGreen
     }
 }
