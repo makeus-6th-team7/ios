@@ -185,6 +185,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3D761882263061D300C031EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3D761883263061E400C031EA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		3D78325F25E15534000D96E4 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +244,8 @@
 		3DC5097D25DA4AF300E2579B /* MakeUs6th */ = {
 			isa = PBXGroup;
 			children = (
+				3D761883263061E400C031EA /* Network */,
+				3D761882263061D300C031EA /* Model */,
 				3D29A496261216E500A3ADA8 /* MakeUs6th.entitlements */,
 				3DDA90E125F6642E00C6A536 /* Cell */,
 				3D3C53BD25F65EDF007D2456 /* View */,

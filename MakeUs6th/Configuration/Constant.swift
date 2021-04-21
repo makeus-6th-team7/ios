@@ -8,5 +8,5 @@
 import Alamofire
 
 struct Constant {
-    static let BASE_URL = "URL 주소를 입력해주세요"
+    static let BASE_URL = "http://52.79.187.77"
 }
