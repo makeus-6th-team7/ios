@@ -6,10 +6,14 @@ target 'MakeUs6th' do
   use_frameworks!
 
   # Pods for MakeUs6th
-  pod 'Alamofire'
-  pod 'AlamofireNetworkActivityIndicator'
+  #pod 'Alamofire'
+  #pod 'AlamofireNetworkActivityIndicator'
   pod 'SnapKit'
   pod 'Then'
+  # 필요한 모듈 추가
+  pod 'KakaoSDKCommon'  # 필수 요소를 담은 공통 모듈
+  pod 'KakaoSDKAuth'  # 사용자 인증
+  pod 'KakaoSDKUser'  # 카카오 로그인, 사용자 관리
 
   target 'MakeUs6thTests' do
     inherit! :search_paths
