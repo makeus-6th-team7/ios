@@ -81,10 +81,10 @@ class FirstViewController: UIViewController {
         $0.contentMode = .scaleToFill
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.view.backgroundColor = .white
         // Do any additional setup after loading the view.
         _ = [mainLabel,underlineView,lastLabel,subLabel,imgView,divisonView,signUpLabel,kakaoCircle,appleCircle].map { self.view.addSubview($0)}
@@ -94,7 +94,7 @@ class FirstViewController: UIViewController {
         _ = [kakaoCircle,appleCircle].map {self.didTapLogin($0)}
         bindConstraints()
     }
-
+    
 }
 
 extension FirstViewController {
@@ -180,28 +180,48 @@ extension FirstViewController {
         }
     }
 }
-        
+
 extension FirstViewController {
     @objc func checkAction(sender : UITapGestureRecognizer) {
         // Do what you want
         //self.changeRootViewController(UINavigationController(rootViewController: HomeMainViewController()))
         
-//        let setNameVC = SetNameViewController()
-//        setNameVC.modalPresentationStyle = .fullScreen
-//        self.present(setNameVC, animated: false, completion: nil)
-
-    
-        AuthApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+        //        let setNameVC = SetNameViewController()
+        //        setNameVC.modalPresentationStyle = .fullScreen
+        //        self.present(setNameVC, animated: false, completion: nil)
+        
+        // 카카오톡 설치 여부 확인
+        if (AuthApi.isKakaoTalkLoginAvailable()) {
+            AuthApi.shared.loginWithKakaoTalk {(oauthToken, error) in
                 if let error = error {
-                    print(error)
+                    print("에러: \(error)")
                 }
                 else {
-                    print("loginWithKakaoAccount() success.")
-
+                    print("kakaotalk 설치됨")
+                    
                     //do something
                     _ = oauthToken
                 }
             }
+        } else {
+            
+            AuthApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("kakaotalk 미설치 사파리로 ㄱㄱ")
+                    print("loginWithKakaoAccount() success.")
+                    //do something
+                    _ = oauthToken
+                    // 어세스토큰
+                    let accessToken = oauthToken?.accessToken
+                    print("token is : \(accessToken)")
+                }
+            }
+        }
+        
+   
         
     }
 }
