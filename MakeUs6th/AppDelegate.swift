@@ -7,6 +7,7 @@
 
 import UIKit
 import Photos
+import KakaoSDKCommon
 
 var allPhotos : PHFetchResult<PHAsset>? = nil
 var photoCount = Int()
@@ -31,6 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("error")
             }
         }
+        
+        // kakao
+        KakaoSDKCommon.initSDK(appKey: ApiKey.KAKAO_NATIVEAPPKEY)
         // Override point for customization after application launch.
         return true
     }
