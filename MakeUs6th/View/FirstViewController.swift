@@ -8,6 +8,9 @@
 import UIKit
 import SnapKit
 import Then
+import KakaoSDKAuth
+import KakaoSDKUser
+import KakaoSDKCommon
 
 class FirstViewController: UIViewController {
     
@@ -182,8 +185,23 @@ extension FirstViewController {
     @objc func checkAction(sender : UITapGestureRecognizer) {
         // Do what you want
         //self.changeRootViewController(UINavigationController(rootViewController: HomeMainViewController()))
-        let setNameVC = SetNameViewController()
-        setNameVC.modalPresentationStyle = .fullScreen
-        self.present(setNameVC, animated: false, completion: nil)
+        
+//        let setNameVC = SetNameViewController()
+//        setNameVC.modalPresentationStyle = .fullScreen
+//        self.present(setNameVC, animated: false, completion: nil)
+
+    
+        AuthApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoAccount() success.")
+
+                    //do something
+                    _ = oauthToken
+                }
+            }
+        
     }
 }

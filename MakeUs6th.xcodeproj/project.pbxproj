@@ -29,6 +29,7 @@
 		3D66E00826029538002D385A /* TabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D66E00626029538002D385A /* TabCollectionViewCell.swift */; };
 		3D66E0112602AAAA002D385A /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D66E0102602AAAA002D385A /* CALayer.swift */; };
 		3D66E0162602B3F8002D385A /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D66E0152602B3F8002D385A /* UISearchBar.swift */; };
+		3D73DE9626307CCD001C9D7A /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D73DE9526307CCD001C9D7A /* ApiKey.swift */; };
 		3D78326225E1555A000D96E4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D78326125E1555A000D96E4 /* BaseViewController.swift */; };
 		3D95987A25FCFE4B0085F6EF /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D95987925FCFE4B0085F6EF /* UploadViewController.swift */; };
 		3DAABE582613629100B0E21B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAABE572613629100B0E21B /* FirstViewController.swift */; };
@@ -87,6 +88,7 @@
 		3D66E00626029538002D385A /* TabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D66E0102602AAAA002D385A /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		3D66E0152602B3F8002D385A /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
+		3D73DE9526307CCD001C9D7A /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		3D78326125E1555A000D96E4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3D95987925FCFE4B0085F6EF /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		3DAABE572613629100B0E21B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3D73DE9426307CB1001C9D7A /* Secret */ = {
+			isa = PBXGroup;
+			children = (
+				3D73DE9526307CCD001C9D7A /* ApiKey.swift */,
+			);
+			path = Secret;
+			sourceTree = "<group>";
+		};
 		3D761882263061D300C031EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +212,7 @@
 		3D78325F25E15534000D96E4 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				3D73DE9426307CB1001C9D7A /* Secret */,
 				3D38FDB825F10BAD005A9547 /* CommonClass */,
 				3D38FD9925F10721005A9547 /* Extension */,
 				3D38FD9425F106F0005A9547 /* Constant.swift */,
@@ -563,6 +574,7 @@
 				3D38FD9525F106F0005A9547 /* Constant.swift in Sources */,
 				3DD1249E25FFC73D00EB4225 /* UploadPhotoViewController.swift in Sources */,
 				3D66E00826029538002D385A /* TabCollectionViewCell.swift in Sources */,
+				3D73DE9626307CCD001C9D7A /* ApiKey.swift in Sources */,
 				3DAABE582613629100B0E21B /* FirstViewController.swift in Sources */,
 				3D38FDA525F107F7005A9547 /* UIButton.swift in Sources */,
 				3D38FDA025F107DB005A9547 /* UIView.swift in Sources */,
