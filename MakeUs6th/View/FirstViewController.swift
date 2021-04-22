@@ -186,10 +186,6 @@ extension FirstViewController {
         // Do what you want
         //self.changeRootViewController(UINavigationController(rootViewController: HomeMainViewController()))
         
-        //        let setNameVC = SetNameViewController()
-        //        setNameVC.modalPresentationStyle = .fullScreen
-        //        self.present(setNameVC, animated: false, completion: nil)
-        
         // 카카오톡 설치 여부 확인
         if (AuthApi.isKakaoTalkLoginAvailable()) {
             AuthApi.shared.loginWithKakaoTalk {(oauthToken, error) in
@@ -234,7 +230,12 @@ extension FirstViewController {
 
 extension FirstViewController {
     func didSuccessSignIn(_ result: SignInResult) {
-        self.presentAlert(title: "로그인에 성공하였습니다", message: result.jwt)
+        self.presentAlert(title: "로그인에 성공하였습니다", message: result.jwt, isCancelActionIncluded: true) {
+            action in
+            let setNameVC = SetNameViewController()
+            setNameVC.modalPresentationStyle = .fullScreen
+            self.present(setNameVC, animated: false, completion: nil)
+        }
     }
     
     func failedToRequest(message: String) {
