@@ -44,14 +44,17 @@ class SetNameViewController: BaseViewController {
         $0.text = "다른 분이 사용하고 있는 닉네임이에요."
         $0.textColor = .alertRed
         $0.font = UIFont.systemFont(ofSize: 11)
+        $0.isHidden = true
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         _ = [titleLabel,confirmBtn,subLabel,inputTF,segLineView,repeatAlert].map { self.view.addSubview($0)}
         bindConstraints()
+        
+        inputTF.delegate = self
         
         confirmBtn.addTarget(self, action: #selector(didTapConfirm), for: .touchUpInside)
         inputTF.addTarget(self, action: #selector(didTFChanged), for: .editingChanged)
@@ -92,10 +95,35 @@ extension SetNameViewController {
 extension SetNameViewController {
     
     @objc func didTapConfirm() {
-        self.changeRootViewController(UINavigationController(rootViewController: HomeMainViewController()))
+        let input = NicknameInputModel(userId: inputTF.text ?? "")
+        print("\(String(describing: Token.jwt!))")
+        SetNicknameDataManager().postNickname(input, viewController: self)
+        //self.changeRootViewController(UINavigationController(rootViewController: HomeMainViewController()))
     }
     
     @objc func didTFChanged() {
         confirmBtn.backgroundColor = .mainGreen
+    }
+}
+
+extension SetNameViewController : UITextFieldDelegate {
+    
+    private func textFieldDidBeginEditing(textField: UITextField) -> Bool {
+        if textField == inputTF {
+            // myTextField was touched
+            repeatAlert.isHidden = true
+        }
+        return true
+    }
+}
+
+extension SetNameViewController {
+    func didSuccess() {
+        self.presentAlert(title: "🎉 가입완료 🎉", message: "\(String(describing: inputTF.text!))님, 환영합니다")
+    }
+    
+    
+    func failedToRequest(message: String) {
+        self.presentAlert(title: message)
     }
 }
