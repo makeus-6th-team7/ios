@@ -232,6 +232,8 @@ extension FirstViewController {
     func didSuccessSignIn(_ result: SignInResult) {
         self.presentAlert(title: "로그인에 성공하였습니다", message: result.jwt, isCancelActionIncluded: true) {
             action in
+            let userDefaults = UserDefaults.standard
+            userDefaults.setValue(result.jwt, forKey: "jwt")
             let setNameVC = SetNameViewController()
             setNameVC.modalPresentationStyle = .fullScreen
             self.present(setNameVC, animated: false, completion: nil)

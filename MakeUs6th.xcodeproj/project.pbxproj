@@ -43,6 +43,9 @@
 		3DC509A125DA4AF400E2579B /* MakeUs6thUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC509A025DA4AF400E2579B /* MakeUs6thUITests.swift */; };
 		3DD1249625FFAA2000EB4225 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1249525FFAA2000EB4225 /* UITextField.swift */; };
 		3DD1249E25FFC73D00EB4225 /* UploadPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1249D25FFC73D00EB4225 /* UploadPhotoViewController.swift */; };
+		3DD90B40263122A60078B98C /* NicknameInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD90B3F263122A60078B98C /* NicknameInputModel.swift */; };
+		3DD90B45263122CE0078B98C /* NicknameResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD90B44263122CE0078B98C /* NicknameResponseModel.swift */; };
+		3DD90B4A263123480078B98C /* SetNicknameDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD90B49263123480078B98C /* SetNicknameDataManager.swift */; };
 		3DDA90E325F6644600C6A536 /* HomeTopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA90E225F6644600C6A536 /* HomeTopCollectionViewCell.swift */; };
 		3DDEC60826310B5C003A3E49 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDEC60726310B5C003A3E49 /* Token.swift */; };
 		3DDEC60D26310BE7003A3E49 /* KakaoInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDEC60C26310BE7003A3E49 /* KakaoInputModel.swift */; };
@@ -112,6 +115,9 @@
 		3DC509A225DA4AF400E2579B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DD1249525FFAA2000EB4225 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		3DD1249D25FFC73D00EB4225 /* UploadPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoViewController.swift; sourceTree = "<group>"; };
+		3DD90B3F263122A60078B98C /* NicknameInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameInputModel.swift; sourceTree = "<group>"; };
+		3DD90B44263122CE0078B98C /* NicknameResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponseModel.swift; sourceTree = "<group>"; };
+		3DD90B49263123480078B98C /* SetNicknameDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNicknameDataManager.swift; sourceTree = "<group>"; };
 		3DDA90E225F6644600C6A536 /* HomeTopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopCollectionViewCell.swift; sourceTree = "<group>"; };
 		3DDEC60726310B5C003A3E49 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		3DDEC60C26310BE7003A3E49 /* KakaoInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoInputModel.swift; sourceTree = "<group>"; };
@@ -209,6 +215,8 @@
 			children = (
 				3DDEC60C26310BE7003A3E49 /* KakaoInputModel.swift */,
 				3DDEC61426310C97003A3E49 /* KakaoResponseModel.swift */,
+				3DD90B3F263122A60078B98C /* NicknameInputModel.swift */,
+				3DD90B44263122CE0078B98C /* NicknameResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				3DDEC61E26310D1A003A3E49 /* KakaoDataManager.swift */,
+				3DD90B49263123480078B98C /* SetNicknameDataManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -586,6 +595,7 @@
 				3D38FDAA25F1080F005A9547 /* UIViewController.swift in Sources */,
 				3DDEC60D26310BE7003A3E49 /* KakaoInputModel.swift in Sources */,
 				3D38FD9525F106F0005A9547 /* Constant.swift in Sources */,
+				3DD90B45263122CE0078B98C /* NicknameResponseModel.swift in Sources */,
 				3DD1249E25FFC73D00EB4225 /* UploadPhotoViewController.swift in Sources */,
 				3D66E00826029538002D385A /* TabCollectionViewCell.swift in Sources */,
 				3D73DE9626307CCD001C9D7A /* ApiKey.swift in Sources */,
@@ -598,10 +608,12 @@
 				3DC5098125DA4AF300E2579B /* SceneDelegate.swift in Sources */,
 				3D1469DA260A1BDC0082C888 /* PopularMainViewController.swift in Sources */,
 				3DDA90E325F6644600C6A536 /* HomeTopCollectionViewCell.swift in Sources */,
+				3DD90B40263122A60078B98C /* NicknameInputModel.swift in Sources */,
 				3D1469D5260A0E8A0082C888 /* TagCollectionViewCell.swift in Sources */,
 				3D38FD9B25F1074E005A9547 /* Color.swift in Sources */,
 				3D38FDBA25F10BBE005A9547 /* IndicatorView.swift in Sources */,
 				3D66E0162602B3F8002D385A /* UISearchBar.swift in Sources */,
+				3DD90B4A263123480078B98C /* SetNicknameDataManager.swift in Sources */,
 				3DDEC61F26310D1A003A3E49 /* KakaoDataManager.swift in Sources */,
 				3D3C53BF25F65F01007D2456 /* HomeViewController.swift in Sources */,
 				3DDEC60826310B5C003A3E49 /* Token.swift in Sources */,
