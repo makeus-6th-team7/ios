@@ -215,13 +215,29 @@ extension FirstViewController {
                     //do something
                     _ = oauthToken
                     // 어세스토큰
-                    let accessToken = oauthToken?.accessToken
-                    print("token is : \(accessToken)")
+                    //let accessToken = oauthToken?.accessToken
+                    if let accessToken = oauthToken?.accessToken {
+                        // 임시 변수에 Optional 변수의 value값이 할당됩니다.
+                        Token.kakaoAccessToken = accessToken
+                    }
+                    let input = KakaoInputModel(accessToken: Token.kakaoAccessToken)
+                    KakaoDataManager().postSignIn(input, viewController: self)
+                    
                 }
             }
         }
         
-   
         
+        
+    }
+}
+
+extension FirstViewController {
+    func didSuccessSignIn(_ result: SignInResult) {
+        self.presentAlert(title: "로그인에 성공하였습니다", message: result.jwt)
+    }
+    
+    func failedToRequest(message: String) {
+        self.presentAlert(title: message)
     }
 }
