@@ -23,7 +23,7 @@ class SetNicknameDataManager {
                         //성공시, vc내 성공 func 호출 및 실행
                         viewController.didSuccess()
                     } else if response.code == 2011 {
-                        // 중복 코드 : 중복일 경우, 중복 경고 label 보여주기
+                        // 중복 코드 : 중복일 경우, 중복 경고 label hidden
                         viewController.repeatAlert.isHidden = false
                     } else {
                         
