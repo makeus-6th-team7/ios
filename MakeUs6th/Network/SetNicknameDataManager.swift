@@ -24,7 +24,8 @@ class SetNicknameDataManager {
                         viewController.didSuccess()
                     } else if response.code == 2011 {
                         // 중복 코드 : 중복일 경우, 중복 경고 label hidden
-                        viewController.repeatAlert.isHidden = false
+                        //viewController.repeatAlert.isHidden = false
+                        viewController.alertRepeat()
                     } else {
                         
                     }

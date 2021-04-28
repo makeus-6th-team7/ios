@@ -122,6 +122,10 @@ extension SetNameViewController {
         self.presentAlert(title: "🎉 가입완료 🎉", message: "\(String(describing: inputTF.text!))님, 환영합니다")
     }
     
+    func alertRepeat() {
+        self.repeatAlert.isHidden = false
+    }
+    
     
     func failedToRequest(message: String) {
         self.presentAlert(title: message)
