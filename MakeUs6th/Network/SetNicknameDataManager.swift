@@ -27,7 +27,7 @@ class SetNicknameDataManager {
                         //viewController.repeatAlert.isHidden = false
                         viewController.alertRepeat()
                     } else {
-                        
+                        viewController.failedToRequest(message: "No token!")
                     }
                     //print(response)
                 case .failure(let error):
