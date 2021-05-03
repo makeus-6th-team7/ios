@@ -95,6 +95,7 @@ extension SetNameViewController {
 extension SetNameViewController {
     
     @objc func didTapConfirm() {
+        repeatAlert.isHidden = true
         let input = NicknameInputModel(userId: inputTF.text ?? "")
         print("\(String(describing: Token.jwt!))")
         SetNicknameDataManager().postNickname(input, viewController: self)
