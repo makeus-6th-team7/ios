@@ -211,6 +211,7 @@ extension FirstViewController {
                     //do something
                     _ = oauthToken
                     // 어세스토큰
+                    print(oauthToken)
                     //let accessToken = oauthToken?.accessToken
                     if let accessToken = oauthToken?.accessToken {
                         // 임시 변수에 Optional 변수의 value값이 할당됩니다.
