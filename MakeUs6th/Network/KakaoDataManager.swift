@@ -17,6 +17,12 @@ class KakaoDataManager {
                     if response.isSuccess, let result = response.result {
                         viewController.didSuccessSignIn(result)
                     } else {
+                        print("에러메세지")
+                        print(response.code) //2004
+                            /*
+                         유효하지 않은 토큰 오류
+                         */
+                        print(Token.kakaoAccessToken)
                         viewController.failedToRequest(message: response.message)
                     }
                 case .failure(let error):
