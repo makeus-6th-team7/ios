@@ -186,44 +186,52 @@ extension FirstViewController {
         // Do what you want
         //self.changeRootViewController(UINavigationController(rootViewController: HomeMainViewController()))
         
-        // 카카오톡 설치 여부 확인
-        if (AuthApi.isKakaoTalkLoginAvailable()) {
-            AuthApi.shared.loginWithKakaoTalk {(oauthToken, error) in
-                if let error = error {
-                    print("에러: \(error)")
-                }
-                else {
-                    print("kakaotalk 설치됨")
-                    
-                    //do something
-                    _ = oauthToken
-                }
-            }
-        } else {
+        // jwt 여부
+        print("jwt : \(Token.jwt)")
+        if Token.jwt != nil {
+            let setNameVC = SetNameViewController()
+            setNameVC.modalPresentationStyle = .fullScreen
+            self.present(setNameVC, animated: false, completion: nil)
+        }else {
             
-            AuthApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-                if let error = error {
-                    print(error)
-                }
-                else {
-                    print("kakaotalk 미설치 사파리로 ㄱㄱ")
-                    print("loginWithKakaoAccount() success.")
-                    //do something
-                    _ = oauthToken
-                    // 어세스토큰
-                    print(oauthToken)
-                    //let accessToken = oauthToken?.accessToken
-                    if let accessToken = oauthToken?.accessToken {
-                        // 임시 변수에 Optional 변수의 value값이 할당됩니다.
-                        Token.kakaoAccessToken = accessToken
+            // 카카오톡 설치 여부 확인
+            if (UserApi.isKakaoTalkLoginAvailable()) {
+                UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                    if let error = error {
+                        print("에러: \(error)")
                     }
-                    let input = KakaoInputModel(accessToken: Token.kakaoAccessToken)
-                    KakaoDataManager().postSignIn(input, viewController: self)
-                    
+                    else {
+                        print("kakaotalk 설치됨")
+                        
+                        //do something
+                        _ = oauthToken
+                    }
+                }
+            } else {
+                UserApi.shared.loginWithKakaoAccount(prompts: [.Login]) {(oauthToken, error) in
+                    if let error = error {
+                        print(error)
+                    }
+                    else {
+                        
+                        print("kakaotalk 미설치 사파리로 ㄱㄱ")
+                        print("loginWithKakaoAccount() success.")
+                        //do something
+                        _ = oauthToken
+                        // 어세스토큰
+                        //print(oauthToken)
+                        //let accessToken = oauthToken?.accessToken
+                        if let accessToken = oauthToken?.accessToken {
+                            // 임시 변수에 Optional 변수의 value값이 할당됩니다.
+                            Token.kakaoAccessToken = accessToken
+                        }
+                        let input = KakaoInputModel(accessToken: Token.kakaoAccessToken)
+                        KakaoDataManager().postSignIn(input, viewController: self)
+                        
+                    }
                 }
             }
         }
-        
         
         
     }
