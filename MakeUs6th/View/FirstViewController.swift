@@ -186,12 +186,13 @@ extension FirstViewController {
         // Do what you want
         //self.changeRootViewController(UINavigationController(rootViewController: HomeMainViewController()))
         
-        // jwt 여부
-        print("jwt : \(Token.jwt)")
-        if Token.jwt != nil {
-            let setNameVC = SetNameViewController()
-            setNameVC.modalPresentationStyle = .fullScreen
-            self.present(setNameVC, animated: false, completion: nil)
+        // kakao token 여부
+        print("jwt : \(Token.kakaoAccessToken)")
+        if Token.kakaoAccessToken != nil {
+            let mainVC = HomeViewController()
+            //mainVC.modalPresentationStyle = .fullScreen
+            //self.present(mainVC, animated: false, completion: nil)
+            self.changeRootViewController(UINavigationController(rootViewController: mainVC))
         }else {
             
             // 카카오톡 설치 여부 확인
