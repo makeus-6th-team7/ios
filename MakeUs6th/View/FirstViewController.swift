@@ -188,7 +188,7 @@ extension FirstViewController {
         
         // kakao token 여부
         print("jwt : \(Token.kakaoAccessToken)")
-        if Token.kakaoAccessToken != nil {
+        if  Token.kakaoAccessToken.count > 1 {
             let mainVC = HomeViewController()
             //mainVC.modalPresentationStyle = .fullScreen
             //self.present(mainVC, animated: false, completion: nil)
